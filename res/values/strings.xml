@@ -4,5 +4,7 @@
     <string name="app_name">FindFriends</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
+    <string name="basic_map">LBS FindFriends</string>
+    <string name="first_map">第一个地图</string>
 
 </resources>
