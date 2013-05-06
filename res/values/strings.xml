@@ -7,4 +7,24 @@
     <string name="basic_map">LBS FindFriends</string>
     <string name="first_map">第一个地图</string>
 
+    <!-- 登录界面 -->
+    <string name="username_login">用户名</string>
+    <string name="password_login">密码</string>
+    <string name="submit_login">登陆</string>
+    <string name="register_login">注册</string>
+    <string name="rememberme_login">记住我的账号和密码</string>
+
+    <!-- 注册界面 -->
+    <string name="username_register">用户名</string>
+    <string name="password_register">密码</string>
+    <string name="passwordconfirm_register">确认密码</string>
+    <string name="submit_register">注册</string>
+    <string name="reinput_register">重置</string>
+    <string name="email_register">邮箱</string>
+    
+    <string name="suggest_userName">用户名不能为空</string>
+    <string name="suggest_email">邮箱不能为空</string>
+    <string name="suggest_passwordNotEmpty">密码不能为空</string>
+    <string name="suggest_passwordNotSame">两次输入的密码不一致</string>
+
 </resources>
