@@ -37,8 +37,8 @@ public class Constants {
 	
 	
 	public static final String LOGIN_URL = "http://172.20.223.120/lbs/login.php";
-	public static final String ACTION_URL = "http://172.20.223.120/lbs/action.php";
 	public static final String USER_URL = "http://172.20.223.120/lbs/user.php";
+	public static final String ACTION_URL = "http://172.20.223.120/lbs/action.php";
 	
 	public static final String SHARE_LOGIN_INFO = "findfriends.pre";
 	public static final String SHARE_LOGIN_USERNAME = "map_login_username";

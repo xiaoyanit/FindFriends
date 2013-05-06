@@ -11,6 +11,8 @@ package com.sunplusedu.findfriends.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 
 /**
  * 
@@ -58,6 +60,24 @@ public class Utility {
 	public static String getSharedString(Context context, String name, String key) {
 
 		return getSharedPreferences(context, name).getString(key, "");
+	}
+	
+	/**
+	 * 判断当前是否联网 需要添加权限：<uses-permission
+	 * android:name="android.permission.ACCESS_NETWORK_STATE" />
+	 * 
+	 * @param Activity
+	 *            调用网络检测的context
+	 * @return true 联网成功，false 联网失败
+	 * */
+
+	public static boolean isNetWorkConnected(Context context) {
+
+		ConnectivityManager connect = (ConnectivityManager) context
+				.getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo info = connect.getActiveNetworkInfo();
+
+		return (info != null) && (info.isConnectedOrConnecting());
 	}
 
 }

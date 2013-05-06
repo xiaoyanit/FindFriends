@@ -183,7 +183,7 @@ public class MainActivity extends Activity {
 		public void run() {
 
 			/* 判断网络是否可用 */
-			isNetworkAvailable = isNetWorkConnected(MainActivity.this);
+			isNetworkAvailable = Utility.isNetWorkConnected(MainActivity.this);
 
 			if (!isNetworkAvailable) {
 
@@ -343,24 +343,6 @@ public class MainActivity extends Activity {
 		}
 
 		return false;
-	}
-
-	/**
-	 * 判断当前是否联网 需要添加权限：<uses-permission
-	 * android:name="android.permission.ACCESS_NETWORK_STATE" />
-	 * 
-	 * @param Activity
-	 *            调用网络检测的context
-	 * @return true 联网成功，false 联网失败
-	 * */
-
-	public boolean isNetWorkConnected(Context context) {
-
-		ConnectivityManager connect = (ConnectivityManager) context
-				.getSystemService(Context.CONNECTIVITY_SERVICE);
-		NetworkInfo info = connect.getActiveNetworkInfo();
-
-		return (info != null) && (info.isConnectedOrConnecting());
 	}
 
 }
