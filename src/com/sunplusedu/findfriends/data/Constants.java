@@ -1,4 +1,4 @@
-package com.sunplusedu.findfriends.util;
+package com.sunplusedu.findfriends.data;
 
 import com.amap.api.maps.model.LatLng;
 
