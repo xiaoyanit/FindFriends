@@ -264,6 +264,10 @@ public class MainActivity extends Activity {
 
 		System.out.println("strResult:" + resultString);
 
+		if(resultString == null){
+			return false;
+		}
+		
 		if (resultString
 				.equals("<script>window.location.href='index.php'</script>")) {
 			loginState = true;
