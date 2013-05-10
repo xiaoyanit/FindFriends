@@ -35,6 +35,8 @@ import android.widget.Toast;
 import com.sunplusedu.findfriends.data.Constants;
 import com.sunplusedu.findfriends.util.Utility;
 
+///git  test
+
 public class MainActivity extends Activity {
 
 	private String mUserName = null;
