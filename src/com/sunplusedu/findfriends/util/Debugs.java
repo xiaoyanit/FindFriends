@@ -1,24 +1,7 @@
-/**
- * 
- * FileName Debug.java  <br />
- * @author wenhao <br />
- * @version 1.0   <br />
- * @created 2012-12-29 ����6:03:37 <br />
- * 
- */
 package com.sunplusedu.findfriends.util;
 
 import android.content.Context;
 
-/**
- *  ע����
- *  ��System.outע�ͺ�Toastע�� 
- *  
- * @author wenhao <br />
- * @version 1.0   <br />
- * @created 2012-12-29 ����6:03:37 <br />
- * 
- */
 public class Debugs {
 
     /*
@@ -61,15 +44,8 @@ public class Debugs {
             System.out.println(content);
     }
 
-    
-    /**
-     * 
-     * Toastע��
-     * 
-     * */
     public static void toast(Context context, String message) {
         if (DEBUG)
             android.widget.Toast.makeText(context, message, SHORT).show();
     }
-
 }
