@@ -32,8 +32,10 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.sunplusedu.findfriends.util.Constants;
+import com.sunplusedu.findfriends.data.Constants;
 import com.sunplusedu.findfriends.util.Utility;
+
+///git  test
 
 public class MainActivity extends Activity {
 
