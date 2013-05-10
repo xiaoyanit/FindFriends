@@ -23,7 +23,7 @@ import com.sunplusedu.findfriends.util.AMapUtil;
  * 
  */
 public class BasicMapActivity extends FragmentActivity{
-	
+	//test
 	private AMap mAMap = null;
 
 	@Override
