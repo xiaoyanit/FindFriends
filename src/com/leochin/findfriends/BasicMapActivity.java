@@ -6,14 +6,14 @@
  * @created 2013-5-6 上午10:37:08 <br />
  * 
  */
-package com.sunplusedu.findfriends;
+package com.leochin.findfriends;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
 import com.amap.api.maps.AMap;
 import com.amap.api.maps.SupportMapFragment;
-import com.sunplusedu.findfriends.util.AMapUtil;
+import com.leochin.findfriends.util.AMapUtil;
 
 /**
  * 

@@ -1,4 +1,4 @@
-package com.sunplusedu.findfriends;
+package com.leochin.findfriends;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,11 +14,8 @@ import org.apache.http.util.EntityUtils;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences.Editor;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -32,8 +29,8 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.sunplusedu.findfriends.data.Constants;
-import com.sunplusedu.findfriends.util.Utility;
+import com.leochin.findfriends.data.Constants;
+import com.leochin.findfriends.util.Utility;
 
 ///git  test
 

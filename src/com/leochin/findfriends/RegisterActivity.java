@@ -1,4 +1,4 @@
-package com.sunplusedu.findfriends;
+package com.leochin.findfriends;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,12 +18,10 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
@@ -31,8 +29,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.sunplusedu.findfriends.data.Constants;
-import com.sunplusedu.findfriends.util.Utility;
+import com.leochin.findfriends.data.Constants;
+import com.leochin.findfriends.util.Utility;
 
 public class RegisterActivity extends Activity {
 

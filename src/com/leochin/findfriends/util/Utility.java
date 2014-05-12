@@ -6,7 +6,7 @@
  * @created 2013-5-6 下午2:45:37 <br />
  * 
  */
-package com.sunplusedu.findfriends.util;
+package com.leochin.findfriends.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;

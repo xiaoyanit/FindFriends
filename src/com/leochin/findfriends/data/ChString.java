@@ -1,4 +1,4 @@
-package com.sunplusedu.findfriends.data;
+package com.leochin.findfriends.data;
 
 public class ChString {
 	public static final String Kilometer = "\u516c\u91cc";// "公里";

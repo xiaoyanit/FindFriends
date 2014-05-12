@@ -6,7 +6,7 @@
  * @created 2012-12-29 ����6:03:37 <br />
  * 
  */
-package com.sunplusedu.findfriends.util;
+package com.leochin.findfriends.util;
 
 import android.content.Context;
 

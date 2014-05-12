@@ -1,4 +1,4 @@
-package com.sunplusedu.findfriends.data;
+package com.leochin.findfriends.data;
 
 import com.amap.api.maps.model.LatLng;
 
@@ -33,12 +33,10 @@ public class Constants {
 	public static final LatLng HAERBIN = new LatLng(45.803774, 126.534967);// 哈尔滨市经纬度
 	public static final LatLng XINING = new LatLng(36.617144, 101.778228);// 西宁市经纬度
 	
-	public static final LatLng SHANGDI = new LatLng(40.037567,116.314297); //凌阳教育
-	
-	
-	public static final String LOGIN_URL = "http://172.20.223.120/lbs/login.php";
-	public static final String USER_URL = "http://172.20.223.120/lbs/user.php";
-	public static final String ACTION_URL = "http://172.20.223.120/lbs/action.php";
+	public static final String PREFIX_URL = "http://192.168.1.103/lbs/";
+	public static final String LOGIN_URL = PREFIX_URL+"login.php";
+	public static final String USER_URL = PREFIX_URL+"user.php";
+	public static final String ACTION_URL = PREFIX_URL+"action.php";
 	
 	public static final String SHARE_LOGIN_INFO = "findfriends.pre";
 	public static final String SHARE_LOGIN_USERNAME = "map_login_username";

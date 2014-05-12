@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.sunplusedu.findfriends.util;
+package com.leochin.findfriends.util;
 
 import java.text.DecimalFormat;
 
@@ -12,7 +12,7 @@ import android.text.Spanned;
 import com.amap.api.maps.AMap;
 import com.amap.api.maps.model.LatLng;
 import com.amap.api.search.core.LatLonPoint;
-import com.sunplusedu.findfriends.data.ChString;
+import com.leochin.findfriends.data.ChString;
 
 /*******
  * @project AMapV2Demos
