@@ -2,8 +2,8 @@ package com.leochin.findfriends.data;
 
 import java.util.ArrayList;
 
-import com.amap.api.maps.model.LatLng;
-import com.amap.api.maps.model.Marker;
+import com.amap.api.maps2d.model.LatLng;
+import com.amap.api.maps2d.model.Marker;
 
 public class UserInfo {
     protected String uid;

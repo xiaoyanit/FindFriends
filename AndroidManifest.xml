@@ -30,7 +30,7 @@
         android:theme="@style/AppTheme" >
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="733e6975879e3346ed81b380281753fd" />
+            android:value="b99d0e085153a3c4d9d11f11804ab988" />
 
         <activity
             android:name="com.leochin.findfriends.view.LoginActivity"
@@ -45,10 +45,11 @@
             android:name="com.leochin.findfriends.view.BasicMapActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/basic_map" />
+        
         <activity android:name="com.leochin.findfriends.view.RegisterActivity" />
 
-        <service android:name="com.leochin.findfriends.push.MQTTService" >
-        </service>
+        <service android:name="com.leochin.findfriends.push.MQTTService" />
+
     </application>
 
 </manifest>

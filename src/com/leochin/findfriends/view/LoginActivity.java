@@ -224,7 +224,7 @@ public class LoginActivity extends Activity {
         List<NameValuePair> params = new ArrayList<NameValuePair>();
         params.add(new BasicNameValuePair("username", username));
         params.add(new BasicNameValuePair("password", password));
-        params.add(new BasicNameValuePair("version", "majin"));
+        params.add(new BasicNameValuePair("version", "leochin"));
         resultString = Utility.httpPostRequest(url, params);
         
         if(resultString.equals("")){
@@ -327,7 +327,7 @@ public class LoginActivity extends Activity {
         /* 设置HostUser的信息*/
         HostUser hostUser = HostUser.getHostUserInstance();
         hostUser.setUserInfo(user);
-        Log.d("majin","登陆成功:"+hostUser.getUid());
+        Debugs.d("leochin","登陆成功:"+hostUser.getUid());
         hostUser.setOnline(true);
         
         Debugs.d(TAG, "online" + hostUser.isOnline());

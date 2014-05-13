@@ -50,21 +50,21 @@ import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationListener;
 import com.amap.api.location.LocationManagerProxy;
 import com.amap.api.location.LocationProviderProxy;
-import com.amap.api.maps.AMap;
-import com.amap.api.maps.AMap.CancelableCallback;
-import com.amap.api.maps.AMap.OnMapClickListener;
-import com.amap.api.maps.AMap.OnMarkerClickListener;
-import com.amap.api.maps.CameraUpdate;
-import com.amap.api.maps.CameraUpdateFactory;
-import com.amap.api.maps.LocationSource;
-import com.amap.api.maps.LocationSource.OnLocationChangedListener;
-import com.amap.api.maps.SupportMapFragment;
-import com.amap.api.maps.model.BitmapDescriptor;
-import com.amap.api.maps.model.BitmapDescriptorFactory;
-import com.amap.api.maps.model.CameraPosition;
-import com.amap.api.maps.model.LatLng;
-import com.amap.api.maps.model.Marker;
-import com.amap.api.maps.model.MarkerOptions;
+import com.amap.api.maps2d.AMap;
+import com.amap.api.maps2d.AMap.CancelableCallback;
+import com.amap.api.maps2d.AMap.OnMapClickListener;
+import com.amap.api.maps2d.AMap.OnMarkerClickListener;
+import com.amap.api.maps2d.CameraUpdate;
+import com.amap.api.maps2d.CameraUpdateFactory;
+import com.amap.api.maps2d.LocationSource;
+import com.amap.api.maps2d.LocationSource.OnLocationChangedListener;
+import com.amap.api.maps2d.SupportMapFragment;
+import com.amap.api.maps2d.model.BitmapDescriptor;
+import com.amap.api.maps2d.model.BitmapDescriptorFactory;
+import com.amap.api.maps2d.model.CameraPosition;
+import com.amap.api.maps2d.model.LatLng;
+import com.amap.api.maps2d.model.Marker;
+import com.amap.api.maps2d.model.MarkerOptions;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.leochin.findfriends.R;
@@ -168,19 +168,6 @@ public class BasicMapActivity extends FragmentActivity {
         unregisterReceiver(mBrocadRecvState);
         unregisterReceiver(mBrocadRecvMsg);
     }
-/*
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.map_menu, menu);
-        return true;
-    }
-    
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        startActivity(new Intent(this, SettingActivity.class));
-        return true;
-    }
-*/
 
     /**
      * 返回按钮的处理
@@ -279,7 +266,7 @@ public class BasicMapActivity extends FragmentActivity {
      */
     private void dealPushServiceMsg(Intent intent){
         String msg = intent.getStringExtra(MQTTService.MQTT_MSG_RECEIVED_MSG);
-        Log.d("msg", "msg="+msg);
+        Debugs.d("msg", "msg="+msg);
         
         if(!msg.contains("uid")){
             return;
@@ -403,7 +390,9 @@ public class BasicMapActivity extends FragmentActivity {
 
                 if (updateFlag) {
                     /* 发送自己的定位信息 */
-                    new Thread(new Runnable() {
+                	
+                	//runOnUiThread(action)
+                    runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             // TODO Auto-generated method stub
@@ -417,7 +406,7 @@ public class BasicMapActivity extends FragmentActivity {
                                 updateLocation();
                             }
                         }
-                     }).start();
+                     });
                 }
             }
         };
@@ -712,7 +701,7 @@ public class BasicMapActivity extends FragmentActivity {
     private BitmapDescriptor getUserBitmapDescriptor(UserInfo info) {
         int w = 82;
         int h = 104;
-        Log.d("majin", "info.getUsername()=="+info.toString());
+        Debugs.d("leochin", "info.getUsername()=="+info.toString());
         Resources  res = this.getBaseContext().getResources(); 
 
         Bitmap bmp = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
@@ -738,7 +727,7 @@ public class BasicMapActivity extends FragmentActivity {
         mPaint.setColor(Color.WHITE);
         
         Debugs.d(TAG,"info ="+info.toString());
-        Log.d("majin", "info.getUsername()=="+info.getUsername());
+        Debugs.d("leochin", "info.getUsername()=="+info.getUsername());
         canvasTemp.drawText(info.getUsername(), 5, 78, mPaint);
         if(info.getMsgNum() > 0){
             canvasTemp.drawText(Integer.toString(info.getMsgNum()), w-12, 15, mPaint);

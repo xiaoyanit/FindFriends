@@ -9,8 +9,8 @@ import android.content.Context;
 import android.text.Html;
 import android.text.Spanned;
 
-import com.amap.api.maps.AMap;
-import com.amap.api.maps.model.LatLng;
+import com.amap.api.maps2d.AMap;
+import com.amap.api.maps2d.model.LatLng;
 import com.amap.api.search.core.LatLonPoint;
 import com.leochin.findfriends.data.ChString;
 

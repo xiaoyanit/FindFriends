@@ -97,7 +97,7 @@ public class Utility {
             httpRequest.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
             
             HttpResponse httpResponse = new DefaultHttpClient().execute(httpRequest);
-            Log.d("majin", "url="+url +"--1->"+httpResponse.getStatusLine());
+            Debugs.d("leochin", "url="+url +"--1->"+httpResponse.getStatusLine());
             if (httpResponse.getStatusLine().getStatusCode() == 200) {
                 resultString = EntityUtils.toString(httpResponse.getEntity()); // 服务器返回的数据
             }
@@ -116,7 +116,7 @@ public class Utility {
             HttpPost httpRequest = new HttpPost(url); // 使用Apache的网络库
             httpRequest.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
             HttpResponse rp = new DefaultHttpClient().execute(httpRequest);
-            Log.d("majin", "url="+url +"--2->"+rp.getStatusLine());
+            Debugs.d("leochin", "url="+url +"--2->"+rp.getStatusLine());
         } catch (Exception e) {
             e.printStackTrace();
         }

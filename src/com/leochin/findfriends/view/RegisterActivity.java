@@ -254,7 +254,7 @@ public class RegisterActivity extends Activity {
         params.add(new BasicNameValuePair("username", userName));
         params.add(new BasicNameValuePair("password", password));
         params.add(new BasicNameValuePair("email", email));
-        params.add(new BasicNameValuePair("version", "majin"));
+        params.add(new BasicNameValuePair("version", "leochin"));
 
         mResultString  = Utility.httpPostRequest(validateUrl, params);
 
