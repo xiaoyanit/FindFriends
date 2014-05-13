@@ -13,3 +13,7 @@ LBS&MQTT App
 服务器代码地址：
 
 - [FindFriendsServer](https://github.com/hnrainll/FindFriendsServer)
+
+FindFriendsServer搭建博文:
+
+- [FindFriendsServer服务搭建](http://leochin.com/android-findfriendsserver-environment/)
