@@ -32,7 +32,6 @@ import android.widget.Toast;
 import com.leochin.findfriends.data.Constants;
 import com.leochin.findfriends.util.Utility;
 
-///git  test
 
 public class MainActivity extends Activity {
 

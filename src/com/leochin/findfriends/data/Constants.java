@@ -35,7 +35,7 @@ public class Constants {
 	
 	public static final String PREFIX_URL = "http://192.168.1.103/lbs/";
 	public static final String LOGIN_URL = PREFIX_URL+"login.php";
-	public static final String USER_URL = PREFIX_URL+"user.php";
+	public static final String USER_URL = PREFIX_URL+"registeruser.php";
 	public static final String ACTION_URL = PREFIX_URL+"action.php";
 	
 	public static final String SHARE_LOGIN_INFO = "findfriends.pre";

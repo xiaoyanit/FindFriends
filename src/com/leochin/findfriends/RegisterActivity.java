@@ -30,6 +30,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.leochin.findfriends.data.Constants;
+import com.leochin.findfriends.util.Debugs;
 import com.leochin.findfriends.util.Utility;
 
 public class RegisterActivity extends Activity {
@@ -195,8 +196,8 @@ public class RegisterActivity extends Activity {
 	private boolean validateRegister(String userName, String email,
 			String password, String validateUrl) {
 
-		System.out.println("username:" + userName);
-		System.out.println("password:" + password);
+		Debugs.d("wenhao","username:" + userName);
+		Debugs.d("wenhao","password:" + password);
 
 		boolean registerState = false;
 
@@ -214,11 +215,12 @@ public class RegisterActivity extends Activity {
 			HttpResponse httpResponse = new DefaultHttpClient()
 					.execute(httpRequest);
 
+			Debugs.d("wenhao", httpResponse.getStatusLine().getStatusCode()+" status");
 			if (httpResponse.getStatusLine().getStatusCode() == 200) {
 
 				mResultString = EntityUtils.toString(httpResponse.getEntity());
 
-				System.out.println("strResult: " + mResultString);
+				Debugs.d("wenhao", "strResult: " + mResultString);
 			}
 
 		} catch (Exception e) {
@@ -226,6 +228,11 @@ public class RegisterActivity extends Activity {
 			e.printStackTrace();
 		}
 
+		if(mResultString == null){
+			
+			return false;
+		}
+		
 		if (mResultString
 				.equals("<script>window.location.href='index.php'</script>")) {
 
@@ -269,7 +276,7 @@ public class RegisterActivity extends Activity {
 			boolean registerState = validateRegister(mUserName, mEmail,
 					mPassword, validateURL);
 
-			System.out.println("register state:" + registerState);
+			Debugs.d("wenhao", "register state:" + registerState);
 
 			if (registerState) {
 
