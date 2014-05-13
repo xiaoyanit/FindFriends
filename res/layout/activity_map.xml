@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.amap.api.maps.SupportMapFragment" />
+
+    <LinearLayout
+        android:id="@+id/ID_MAP_SENDMSG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/send_msg_back"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/ID_MAP_BROADCAST_CHECKBOX"
+            style="@style/MyCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/ID_MAP_EDITTEXT_SENDMSG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/map_edittext_selector"
+            android:ems="6" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/ID_MAP_BUTTON_SEND"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
+            android:text="@string/map_send"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ID_MAP_SHOW_MSG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ID_MAP_SENDMSG"
+        android:background="@drawable/msg_bk"
+        android:visibility="invisible"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/ID_MAP_MSG_TITLE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#117BD2"
+            android:paddingLeft="3dp"
+            android:text="@string/map_showmsg_title"
+            android:textColor="#ffffff" />
+
+        <ListView
+            android:id="@+id/ID_MAP_LISTVIEW_MSG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@drawable/list_driver" >
+        </ListView>
+    </LinearLayout>
+    
+        <ImageView
+        android:id="@+id/ID_MAP_MY_LACATION"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:paddingRight="7dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/my_location" />
+
+</RelativeLayout>

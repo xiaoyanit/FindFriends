@@ -1,18 +1,21 @@
-/**
- * 
- * FileName Utitly.java  <br />
- * @author Mr.Wen <br />
- * @version 1.0   <br />
- * @created 2013-5-6 下午2:45:37 <br />
- * 
- */
 package com.leochin.findfriends.util;
+
+import java.util.List;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.protocol.HTTP;
+import org.apache.http.util.EntityUtils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.util.Log;
 
 /**
  * 
@@ -79,5 +82,43 @@ public class Utility {
 
 		return (info != null) && (info.isConnectedOrConnecting());
 	}
+	
+	/**
+	 * httpPostRequest请求，成功返回数据，失败返回为空的String
+	 */
+	public static String httpPostRequest(String url , List<NameValuePair> params){
+	    
+        String resultString = "";
+	    
+	    try {
 
+	        HttpPost httpRequest = new HttpPost(url); // 使用Apache的网络库
+	        
+            httpRequest.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
+            
+            HttpResponse httpResponse = new DefaultHttpClient().execute(httpRequest);
+            Log.d("majin", "url="+url +"--1->"+httpResponse.getStatusLine());
+            if (httpResponse.getStatusLine().getStatusCode() == 200) {
+                resultString = EntityUtils.toString(httpResponse.getEntity()); // 服务器返回的数据
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+	    return resultString;
+	}
+	
+	/**
+     * httpPostRequest请求，成功返回数据，失败返回为空的String
+     */
+    public static void httpPostRequestNoBack(String url , List<NameValuePair> params){
+        try {
+
+            HttpPost httpRequest = new HttpPost(url); // 使用Apache的网络库
+            httpRequest.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
+            HttpResponse rp = new DefaultHttpClient().execute(httpRequest);
+            Log.d("majin", "url="+url +"--2->"+rp.getStatusLine());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

@@ -8,11 +8,14 @@
     <string name="first_map">第一个地图</string>
 
     <!-- 登录界面 -->
-    <string name="username_login">用户名</string>
-    <string name="password_login">密码</string>
-    <string name="submit_login">登陆</string>
-    <string name="register_login">注册</string>
-    <string name="rememberme_login">记住我的账号和密码</string>
+    <string name="login_username_login">用户名</string>
+    <string name="login_password_login">密码</string>
+    <string name="login_submit_login">登陆</string>
+    <string name="login_register_login">注册</string>
+    <string name="login_rememberme_login">记住我的账号和密码</string>
+    <string name="login_net_unavailable">登陆失败:\n1.请检查您网络连接.\n2.请联系我们.!</string>
+    <string name="login_net_unrespond">登陆失败:远程无响应!</string>
+    <string name="login_login_failure">登陆失败,请输入正确的用户名和密码!</string>
 
     <!-- 注册界面 -->
     <string name="username_register">用户名</string>
@@ -26,5 +29,8 @@
     <string name="suggest_email">邮箱不能为空</string>
     <string name="suggest_passwordNotEmpty">密码不能为空</string>
     <string name="suggest_passwordNotSame">两次输入的密码不一致</string>
+    
+    <string name="map_showmsg_title">来自：</string>
+    <string name="map_send">发送</string>
 
 </resources>

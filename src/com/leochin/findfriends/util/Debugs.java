@@ -1,14 +1,7 @@
-/**
- * 
- * FileName Debug.java  <br />
- * @author wenhao <br />
- * @version 1.0   <br />
- * @created 2012-12-29 ����6:03:37 <br />
- * 
- */
 package com.leochin.findfriends.util;
 
 import android.content.Context;
+
 
 public class Debugs {
 

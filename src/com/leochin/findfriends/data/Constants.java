@@ -32,13 +32,20 @@ public class Constants {
 	public static final LatLng HUHEHAOTE = new LatLng(40.842299, 111.7491380);// 呼和浩特市经纬度
 	public static final LatLng HAERBIN = new LatLng(45.803774, 126.534967);// 哈尔滨市经纬度
 	public static final LatLng XINING = new LatLng(36.617144, 101.778228);// 西宁市经纬度
+
+    //public static final String PUSH_SERVICE_IPADD = "172.20.223.120";
+    public static final String PUSH_SERVICE_IPADD = "http://192.168.1.103/lbs/";
 	
-	public static final String PREFIX_URL = "http://192.168.1.103/lbs/";
-	public static final String LOGIN_URL = PREFIX_URL+"login.php";
-	public static final String USER_URL = PREFIX_URL+"registeruser.php";
-	public static final String ACTION_URL = PREFIX_URL+"action.php";
+	public static final String URL_LOGIN = PUSH_SERVICE_IPADD+"login.php";
+	public static final String URL_LOGOUT = PUSH_SERVICE_IPADD+"hideuser.php";
+	public static final String URL_REGIST = PUSH_SERVICE_IPADD+"registeruser.php";
+	public static final String URL_LOCATION = PUSH_SERVICE_IPADD+"location.php";
+	public static final String URL_UPDATE_LOCATION = PUSH_SERVICE_IPADD+"updatelocation.php";
+	public static final String URL_SEND_MSG = PUSH_SERVICE_IPADD+"sendmessage.php";
+	public static final String ACTION_URL = "http://"+PUSH_SERVICE_IPADD+"action.php";
 	
 	public static final String SHARE_LOGIN_INFO = "findfriends.pre";
 	public static final String SHARE_LOGIN_USERNAME = "map_login_username";
 	public static final String SHARE_LOGIN_PASSWORD = "map_login_password";
+
 }

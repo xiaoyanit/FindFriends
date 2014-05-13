@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.leochin.findfriends"
-    android:versionCode="1"
+    android:versionCode="2"
     android:versionName="1.0" >
 
     <uses-sdk
@@ -21,19 +21,19 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="733e6975879e3346ed81b380281753fd" />
 
         <activity
-            android:name="com.leochin.findfriends.MainActivity"
+            android:name="com.leochin.findfriends.view.LoginActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,14 +41,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-       
         <activity
-            android:name="com.leochin.findfriends.BasicMapActivity"
+            android:name="com.leochin.findfriends.view.BasicMapActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/basic_map" />
-        
-        <activity 
-            android:name="com.leochin.findfriends.RegisterActivity" />
+        <activity android:name="com.leochin.findfriends.view.RegisterActivity" />
+
+        <service android:name="com.leochin.findfriends.push.MQTTService" >
+        </service>
     </application>
 
 </manifest>
